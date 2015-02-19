@@ -123,7 +123,7 @@
               </a>
               {% if post.tags %}
               <div class="post-tags">
-                <p>{{- post.tags|format_tags(humanize=True) -}}</p>
+                <p>{{- post.tags -}}</p>
               </div>
               {% endif %}
             </div>
@@ -134,7 +134,7 @@
               <h2><a href="{{ post.permalink }}">{{ post.title }}</a></h2>
               <p class="post-date"><time datetime="{{ post.created_at }}">{{ post.created_at|date_format }}</time></p>
               {% if post.tags and not post.photos %}
-              <p class="post-tags">{{- post.tags|format_tags(humanize=True) -}}</p>
+              <p class="post-tags">{{- post.tags -}}</p>
               {% endif %}
               {% if post.content|striptags|wordcount > 0 %}
               <p>{{ post.content|striptags|truncate(200) }}</p>
@@ -169,7 +169,7 @@
           <div class="post-footer">
             {{ theme.social.bar }}
             {% if post.tags %}
-              <p><strong>Tags:</strong> {{ post.tags|format_tags(humanize=True) }}</p>
+              <p><strong>Tags:</strong> {{ post.tags }}</p>
             {% endif %}
           </div>
         </section>
@@ -215,7 +215,7 @@
           <div class="post-footer">
             {{ theme.social.bar }}
             {% if post.tags %}
-              <p><strong>Tags:</strong> {{ post.tags|format_tags(humanize=True) }}</p>
+              <p><strong>Tags:</strong> {{ post.tags }}</p>
             {% endif %}
           </div>
         </section>
